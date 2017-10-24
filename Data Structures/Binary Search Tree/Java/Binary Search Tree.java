@@ -43,7 +43,49 @@ public class BinarySearchTree {
         return root;
     }
 
+    void remove(int key)
+    {
+        root = removeRec(root, key);
+    }
 
+    Node removeRec(Node root, int key)
+    {
+        if(root == null)
+        {
+            return root;
+        }
+        if(key < root.key)
+        {
+            root.left  = removeRec(root.left, key);
+        }
+        else if(key > root.key)
+        {
+            root.right = removeRec(root.right, key);
+        }
+        else
+        {
+            root.key = getLeft(root.right).key;
+            remove(root.right, root.key);
+        }
+        return root;
+    }
+
+    Node getLeft(Node root)
+    {
+        Node temp = root;
+        if(root == null)
+        {
+            return null;
+        }
+        else
+        {
+            while(temp.left != null)
+            {
+                temp = temp.left;
+            }
+            return temp;
+        }
+    }
     void inorder()  {
         inorderRec(root);
     }
