@@ -9,7 +9,7 @@ If you have git:
 ```sh
 $ mkdir Algorithms
 $ cd Algorithms
-$ git clone https://github.com/imaprincess/Algorithms-4-everyone
+$ git clone https://github.com/imaprincess/Algorithms-4-everyone.git
 ```
 
 If you don't have git download the zip [here](https://github.com/imaprincess/Algorithms-4-everyone/archive/master.zip)
